@@ -27,6 +27,7 @@ import os.path
 import traceback
 import datetime
 import pickle
+import random
 
 #print dir(urllib)
 #import urllib.request
@@ -80,23 +81,11 @@ def time_limit(seconds):
         signal.alarm(0)
 
        
-def kontrola(ukazatel):
+def kontrola(ukazatel, obrazky, reseni):
     """
     Kontrola jednoho studentského řešení
     """
     studentske_reseni = ukazatel() # tim je zavolán váš konstruktor __init__
-    
-    # Trenovani
-    
-    filesall, labelsall = readImageDir(
-        '/home/mjirik/data/zdo2014/zdo2014-training/')
-    #filesall, labelsall = readImageDir(
-    #    '/home/mjirik/mnt/pole_korpusy/queetech/zdo/znacky/')
-    
-    obrazky = filesall[2::8]
-    reseni = labelsall[2::8]
-    
-    print "Total image number: " + len(obrazky)
     
     vysledky = []
     
@@ -143,6 +132,27 @@ def kontrolaVse():
     except:
         print "Problem with mkdir"
 
+    filesall, labelsall = readImageDir(
+        '/home/mjirik/data/zdo2014/znacky-testing/')
+    #filesall, labelsall = readImageDir(
+    #    '/home/mjirik/mnt/pole_korpusy/queetech/zdo/znacky/')
+
+    #inds = range(0,len(filesall))
+    #indsr = np.random.choice(inds, 80)
+    #obrazky = filesall[indsr]
+    #reseni = labelsall[indsr]
+
+    init_seed = int(random.random()*5.0)
+    
+    
+    obrazky = filesall[init_seed::6]
+    reseni = labelsall[init_seed::6]
+    #print "obrazky"
+    #print obrazky
+    
+    print "Total image number: ", len(obrazky)
+
+
     # download all solutions
     for one in solutions_list:
         zip_path = os.path.join(soldir, one[1] + '.zip')
@@ -170,11 +180,11 @@ def kontrolaVse():
             pointer = imp2.Znacky
             #import ZDO2014sample_solution
             #pointer = ZDO2014sample_solution.Znacky
-            scoreone = kontrola(pointer)
+            scoreone = kontrola(pointer, obrazky, reseni)
         except:
             traceback.print_exc()
             print "Problem with: " + one[2]
-        teams.append(one[2])
+        teams.append(one[3])
         scores.append(scoreone)
 
         #this is whole timestamp. I want only date
@@ -195,19 +205,6 @@ def kontrolaVse():
 # <codecell>
 
 def saveAndMergeEvaluation(teams, scores, stamps, filename="ZDO2014evaluation.csv"):
-    #evaluation = {'teams':[], 'scores':[], 'stamps': []}
-    #try:
-    #    stored_evaluation = pickle.load(open(filename, "rb" ))
-    #    eval.update(stored_evaluation)
-    #except:
-    #    print "Cannot read stored data"
-    #    
-    #evaluation['teams'].append(teams)
-    #evaluation['scores'].append(scores)
-    #evaluation['stamps'].append(stamps)
-    
-    # write with pickle
-    #pickle.dump(evaluation, open( filename, "wb" ))
     # write to csv
     import pandas as pd
     try:
@@ -225,9 +222,6 @@ def saveAndMergeEvaluation(teams, scores, stamps, filename="ZDO2014evaluation.cs
         dates.append(dat)
         times.append(tm)
         
-    #data = np.array([evaluation['teams'], 
-    #                 evaluation['scores'],
-    #                 evaluation['stamps']]).T
     npdata = np.array([teams, scores, dates, times]).T
     df = pd.DataFrame(npdata, columns=['team', 'score', 'date', 'time'])
     
@@ -238,10 +232,7 @@ def saveAndMergeEvaluation(teams, scores, stamps, filename="ZDO2014evaluation.cs
         print "wrong format of input csv, rewriting"
     
     df.to_csv(filename, index=False)
-    #print df
-    #df = pd.DataFrame(data, columns=['team', 'score', 'timestamp'])
-    #df.to_csv('ZDO2014evaluation.csv')
-    
+   
     
     return df
 

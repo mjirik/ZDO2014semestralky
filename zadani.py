@@ -95,17 +95,26 @@ print 'prvnich 10 labelu \n', labels[0:10]
 
 # Vyhodnocení bude probíhat hromadně. Pythonovské (a případné jakékoliv další) soubory musejí být v adresáři, který je zabalen do zipu a zveřejněn kdekoliv na síti. 
 # 
-# Ukázka takového zipu je [zde](https://github.com/mjirik/ZDO2014sample_solution/archive/master.zip)
+# 
 # 
 # Pro vyhodnocení:
 # 
-# 1. Vytvořte zip se skriptem
-# 2. Zveřejněte jej kdekoliv na internetu
-# 3. Zašlete cvičícímu následující informace:
-#     * Veřejně dostupné url k zip souboru
-#     * Jméno adresáře v zipu
-#     * Jméno hlavního skriptu
-#     * Krátké pojmenování týmu
+# 1. Vytvořte zip se skriptem a zveřejněte jej kdekoliv na internetu
+# 2. Zašlete cvičícímu následující informace:
+#     1. Veřejně dostupné url k zip souboru
+#     2. Jméno adresáře v zipu
+#     3. Jméno hlavního skriptu
+#     4. Krátké pojmenování týmu
+#     
+# Ukázkové řešení je tedy toto:
+# 
+# 1. Ukázkový zip je [zde](https://github.com/mjirik/ZDO2014sample_solution/archive/master.zip)
+# 2. Informace potřebné pro spuštění:
+#     1. https://github.com/mjirik/ZDO2014sample_solution/archive/master.zip
+#     2. 'ZDO2014sample_solution-master'
+#     3. 'ZDO2014sample_solution'
+#     4. 'sample M. Jirik'
+# 
 # 
 # Tyto informace budou vloženy do [seznamu řešení](http://nbviewer.ipython.org/github/mjirik/ZDO2014semestralky/blob/master/solutions_list.ipynb?create=1). Jeho veřejná podoba nebude aktualizována, takže se adresu s vaším řešením tímto způsobem nikdo nedoví.
 # 
@@ -118,24 +127,17 @@ print 'prvnich 10 labelu \n', labels[0:10]
 # Zjednodušená podoba kontroly
 
 import signal
-from contextlib import contextmanager
+
 import skimage
 import skimage.io
 import numpy as np
 
-class TimeoutException(Exception): pass
 
-@contextmanager
-def time_limit(seconds):
-    def signal_handler(signum, frame):
-        raise TimeoutException, "Timed out!"
-    signal.signal(signal.SIGALRM, signal_handler)
-    signal.alarm(seconds)
-    try:
-        yield
-    finally:
-        signal.alarm(0)
+# na windows nefunguje knihovna contextlib
+# v kodu je proto náhrada od M. Červeného pomocí time
+import time
 
+        
 def kontrola(ukazatel):
     studentske_reseni = ukazatel() # tim je zavolán váš konstruktor __init__
     
@@ -148,17 +150,18 @@ def kontrola(ukazatel):
     vysledky = []
     
     for i in range(0, len(obrazky)):
+        cas1 = time.clock()
         im = skimage.io.imread(obrazky[i])
-    
-        # Zde je volána vaše funkce rozpoznejZnacku
-        try:
-            with time_limit(1):
-                result = studentske_reseni.rozpoznejZnacku(im)
-        except TimeoutException, msg:
-            print "Timed out!"
-            result = None
-            
+        result = studentske_reseni.rozpoznejZnacku(im)           
+
+        cas2 = time.clock()   
+
+        if((cas2 - cas1) >= 1.0):
+            print "cas vyprsel"
+            result = 0
+
         vysledky.append(result)
+            
     hodnoceni = np.array(reseni) == np.array(vysledky)
     skore = np.sum(hodnoceni.astype(np.int)) / np.float(len(reseni))
     
