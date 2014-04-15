@@ -28,6 +28,13 @@
 # 
 # Ve webově dostupné podobě lze studovat podrobnosti (nepříliš dobře) [fungujícího řešení](https://github.com/mjirik/ZDO2014sample_solution)
 # 
+# Nač je potřeba dát pozor:
+# 
+# * class Znacky
+# * funkce rozpoznejZnacku()
+# * případné datové soubory je nutné adresovat relativně pomocí `__file__` (viz init v navazujícím příkladu)
+# * demo režim
+# 
 # Ty nejpodstatnější věci ukazuje následující kód. 
 
 # <codecell>
@@ -45,6 +52,16 @@ class Znacky:
     """
     def __init__(self):
         # Načítání natrénovaných parametrů klasifikátoru ze souboru atd.
+        
+        # Soubory je nelze načítat pomocí prosté cesty
+        # Je potřeba adresovat relativně k poloze aktuálnímu skriptu
+        # vyzkoušet je to možné spuštěním skriptu z jiného než aktuálního adresáře
+        # python ../projects/zdo/mujsuperskript.py
+        
+        ## cesta ke skriptu
+        # path_to_script = os.path.dirname(os.path.abspath(__file__))
+        ## spojení s relativní cestou
+        # classifier_path = os.path.join(path_to_script, "../data/data.pkl")
         pass
     
     def rozpoznejZnacku(self, image, demo=False):
@@ -84,8 +101,8 @@ def readImageDir(path):
 
 files, labels = readImageDir('/home/mjirik/data/zdo2014/zdo2014-training/')
 print "pocet souboru ", len(files)
-print 'prvnich 10 souboru \n', files[0:10]
-print 'prvnich 10 labelu \n', labels[0:10]
+print 'prvnich 3 soubory \n', files[0:3]
+print 'prvnich 3 labely \n', labels[0:3]
 
 # <headingcell level=2>
 
