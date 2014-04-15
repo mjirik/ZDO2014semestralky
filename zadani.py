@@ -118,7 +118,7 @@ print 'prvnich 10 labelu \n', labels[0:10]
 # 
 # Tyto informace budou vloženy do [seznamu řešení](http://nbviewer.ipython.org/github/mjirik/ZDO2014semestralky/blob/master/solutions_list.ipynb?create=1). Jeho veřejná podoba nebude aktualizována, takže se adresu s vaším řešením tímto způsobem nikdo nedoví.
 # 
-# Výsledky budou vyhodnoceny dvakrát týdně. Veřejně dostupný je [vyhodnocovací skript](http://nbviewer.ipython.org/github/mjirik/ZDO2014semestralky/blob/master/vyhodnoceni.ipynb) i s průběžnými výsledky.
+# Výsledky budou vyhodnoceny dvakrát týdně. Veřejně dostupný je [vyhodnocovací skript](http://nbviewer.ipython.org/github/mjirik/ZDO2014semestralky/blob/master/vyhodnoceni.ipynb) i s [průběžnými výsledky](http://nbviewer.ipython.org/github/mjirik/ZDO2014semestralky/blob/master/table.ipynb).
 # 
 # Pro potřeby vašeho testování lze použít následující vyhodnocování:
 
