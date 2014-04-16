@@ -156,6 +156,7 @@ def kontrolaVse():
    
 
     filesall, labelsall = readImageDir(
+        #'/home/mjirik/data/zdo2014/zdo2014-training/')
         '/home/mjirik/data/zdo2014/znacky-testing/')
     #filesall, labelsall = readImageDir(
     #    '/home/mjirik/mnt/pole_korpusy/queetech/zdo/znacky/')
