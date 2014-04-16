@@ -106,7 +106,7 @@ def kontrola(ukazatel, obrazky, reseni):
     
     skore = np.sum(hodnoceni.astype(np.int)) / np.float(len(reseni))
     
-    return skore
+    return skore, vysledky
 
 def my_import(name):
     __import__(name)
@@ -152,36 +152,29 @@ def kontrolaVse():
     scores = []
     teams = []
     stamps = []
+    classifs = []
     
    
 
     filesall, labelsall = readImageDir(
         #'/home/mjirik/data/zdo2014/zdo2014-training/')
         '/home/mjirik/data/zdo2014/znacky-testing/')
-    #filesall, labelsall = readImageDir(
-    #    '/home/mjirik/mnt/pole_korpusy/queetech/zdo/znacky/')
-
-    #inds = range(0,len(filesall))
-    #indsr = np.random.choice(inds, 80)
-    #obrazky = filesall[indsr]
-    #reseni = labelsall[indsr]
+        
+    #sklearn.cross_validation.train_test_split(
 
     init_seed = int(random.random()*5.0)
     
-    
     obrazky = filesall[init_seed::6]
     reseni = labelsall[init_seed::6]
-    #print "obrazky"
-    #print obrazky
+    
+    classifs.append(reseni)
     
     print "Total image number: ", len(obrazky)
-
-
-
 
     # evaluate solutions
     for one in solutions_list:
         scoreone = 0
+        vysledky = []
         try:
             imp1 = my_import('ZDO2014students.' + one[1].replace('-', ''))
             imp2 = my_import('ZDO2014students.' + one[1].replace('-', '') 
@@ -190,12 +183,14 @@ def kontrolaVse():
             pointer = imp2.Znacky
             #import ZDO2014sample_solution
             #pointer = ZDO2014sample_solution.Znacky
-            scoreone = kontrola(pointer, obrazky, reseni)
+            scoreone, vysledky = kontrola(pointer, obrazky, reseni)
         except:
             traceback.print_exc()
             print "Problem with: " + one[2]
         teams.append(one[3])
         scores.append(scoreone)
+        classifs.append(vysledky)
+        
 
         #this is whole timestamp. I want only date
         dat = datetime.datetime.now()
@@ -206,7 +201,7 @@ def kontrolaVse():
         
     #print teams
     #print scores
-    return teams, scores, stamps
+    return teams, scores, stamps, classifs
 
 # <headingcell level=2>
 
@@ -214,7 +209,8 @@ def kontrolaVse():
 
 # <codecell>
 
-def saveAndMergeEvaluation(teams, scores, stamps, filename="ZDO2014evaluation.csv"):
+def saveAndMergeEvaluation(teams, scores, stamps, 
+                           filename="ZDO2014evaluation.csv"):
     # write to csv
     import pandas as pd
     try:
@@ -243,8 +239,20 @@ def saveAndMergeEvaluation(teams, scores, stamps, filename="ZDO2014evaluation.cs
     
     df.to_csv(filename, index=False)
    
-    
     return df
+
+def saveClassifs(teams, classifs, filename='ZDO2014classifs.csv'):
+    """
+    Zápis veškerých klasifikací do csv souboru
+    """
+    import pandas as pd
+    cl = teams[:]
+    cl.insert(0, 'reference')
+    # vytvoř vhodný formát pro uložení
+    aa = {cl[i]:classifs[i] for i in range(0, len(cl))}
+    
+    df = pd.DataFrame(aa)
+    df.to_csv(filename, index=False)
 
 # <headingcell level=1>
 
@@ -253,11 +261,9 @@ def saveAndMergeEvaluation(teams, scores, stamps, filename="ZDO2014evaluation.cs
 # <codecell>
 
 if __name__ == "__main__":
-    teams, scores, stamps = kontrolaVse()
+    teams, scores, stamps, classifs = kontrolaVse()
     tdf = saveAndMergeEvaluation(teams, scores, stamps)
+    saveClassifs(teams, classifs)
     print tdf
     #printEvaluation(teams, scores, stamps)
-
-# <codecell>
-
 
