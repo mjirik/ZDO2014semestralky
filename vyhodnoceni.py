@@ -112,15 +112,7 @@ def my_import(name):
     __import__(name)
     return sys.modules[name]
 
-    
-def kontrolaVse():
-    """
-    Kontrola všech studentských řešení
-    """
-    scores = []
-    teams = []
-    stamps = []
-    soldir = 'ZDO2014students'
+def downloadAll(soldir):
     try:
         shutil.rmtree(soldir)
     except:
@@ -131,6 +123,37 @@ def kontrolaVse():
         open(os.path.join(soldir, "__init__.py"), 'a').close()  
     except:
         print "Problem with mkdir"
+        
+        # download all solutions
+    for one in solutions_list:
+        zip_path = os.path.join(soldir, one[1] + '.zip')
+        urllib.urlretrieve(one[0], zip_path)
+        
+        zf = zipfile.ZipFile(zip_path, "r")
+        zf.extractall(soldir)
+        
+        teamsoldir = zip_path = os.path.join(soldir, one[1])
+        # create __init__.py 
+        open(os.path.join(teamsoldir, "__init__.py"), 'a').close() 
+        
+        # remove '-' from package path
+        teamsoldirnew = teamsoldir.replace('-', '')
+        os.rename(teamsoldir, teamsoldirnew)
+    
+def kontrolaVse():
+    """
+    Kontrola všech studentských řešení
+    """
+    
+    soldir = 'ZDO2014students'
+    downloadAll(soldir)
+    
+    
+    scores = []
+    teams = []
+    stamps = []
+    
+   
 
     filesall, labelsall = readImageDir(
         '/home/mjirik/data/zdo2014/znacky-testing/')
@@ -153,21 +176,7 @@ def kontrolaVse():
     print "Total image number: ", len(obrazky)
 
 
-    # download all solutions
-    for one in solutions_list:
-        zip_path = os.path.join(soldir, one[1] + '.zip')
-        urllib.urlretrieve(one[0], zip_path)
-        
-        zf = zipfile.ZipFile(zip_path, "r")
-        zf.extractall(soldir)
-        
-        teamsoldir = zip_path = os.path.join(soldir, one[1])
-        # create __init__.py 
-        open(os.path.join(teamsoldir, "__init__.py"), 'a').close() 
-        
-        # remove '-' from package path
-        teamsoldirnew = teamsoldir.replace('-', '')
-        os.rename(teamsoldir, teamsoldirnew)
+
 
     # evaluate solutions
     for one in solutions_list:

@@ -18,5 +18,8 @@ print orig_data
 
 # <codecell>
 
-print orig_data.sort(column=['score'], ascending=False)
+#orig_data.sort(column=['score'], ascending=False)
+#print orig_data
+gb = orig_data.groupby('team')
+print gb.max().sort(column=['score'], ascending=False)
 
