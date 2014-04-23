@@ -185,8 +185,11 @@ def kontrolaVse():
             #pointer = ZDO2014sample_solution.Znacky
             scoreone, vysledky = kontrola(pointer, obrazky, reseni)
         except:
-            traceback.print_exc()
-            print "Problem with: " + one[2]
+            
+            print "Problem with: " + one[3]
+            print traceback.format_exc()
+            print "------------------------"
+            vysledky = reseni
         teams.append(one[3])
         scores.append(scoreone)
         classifs.append(vysledky)
@@ -266,4 +269,7 @@ if __name__ == "__main__":
     saveClassifs(teams, classifs)
     print tdf
     #printEvaluation(teams, scores, stamps)
+
+# <codecell>
+
 
