@@ -54,6 +54,7 @@ docs/_build/
 
 
 # ZDO project
-solutions_list.py
-solutions_list.ipynb
+solutions_list.*
+./solutions_list.py
+./solutions_list.ipynb
 
