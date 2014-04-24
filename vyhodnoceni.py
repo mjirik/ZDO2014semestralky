@@ -36,6 +36,12 @@ import random
 import solutions_list
 %run solutions_list
 
+# Nastaveni logovaciho souboru
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+logging.basicConfig(filename='znacky.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s:%(message)s')
+
 # <headingcell level=2>
 
 # Načítání dat
@@ -170,9 +176,10 @@ def kontrolaVse():
     classifs.append(reseni)
     
     print "Total image number: ", len(obrazky)
-
+    logger.debug("Total image number: " + str(len(obrazky)))
     # evaluate solutions
     for one in solutions_list:
+        logger.debug("Team: " + one[3])
         scoreone = 0
         vysledky = []
         try:
@@ -187,7 +194,10 @@ def kontrolaVse():
         except:
             
             print "Problem with: " + one[3]
-            print traceback.format_exc()
+            exc = traceback.format_exc()
+            print exc
+            logger.debug("Problem with: " + one[3])
+            logger.debug(exc)
             print "------------------------"
             vysledky = reseni
         teams.append(one[3])

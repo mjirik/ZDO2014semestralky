@@ -24,7 +24,16 @@ print gb.max().sort(column=['score'], ascending=False)
 
 # <codecell>
 
+#pd.set_option('display.max_columns', None)
 print orig_data
+#print dir(pd)
+
+# <headingcell level=2>
+
+# Logovací soubor
+
+# <codecell>
+
 
 # <headingcell level=1>
 
