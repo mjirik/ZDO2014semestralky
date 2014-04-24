@@ -23,7 +23,7 @@ def readImageDir(path):
         
     return files, labels
 
-def splitDataset(path, outputpath, nfirst=10):
+def splitDataset(path, outputpath, nstart=0, nstop=30):
     dirs = glob.glob(os.path.join(os.path.normpath(path) ,'*'))
 
     if not os.path.exists(outputpath):
@@ -44,7 +44,7 @@ def splitDataset(path, outputpath, nfirst=10):
             # beru si prvních deset souborů
             # šlo by upravit i pro náhodný výběr
             filesInDir.sort()
-            filesInDir = filesInDir[:nfirst]
+            filesInDir = filesInDir[nstart:nstop]
             for onefile in filesInDir:
                 base, srcfile = os.path.split(onefile)
                 destfile = os.path.join(directory, srcfile)
@@ -59,11 +59,7 @@ def splitDataset(path, outputpath, nfirst=10):
 # <codecell>
 
 # rozdělení datasetu. Vezme se vždy prvních deset souborů z daného adresáře
-#splitDataset('/home/mjirik/data/zdo2014/znacky/','/home/mjirik/data/zdo2014/znacky-testing/')
-import random
-import numpy as np
-arr = ['agg', 'bag', 'dada', 'rea', 'raw', 'rwew', 'sra', 'reew']
-ind = np.random.random_integers(7,size=3)
-
-arr.pop(ind)
+#splitDataset('/home/mjirik/data/zdo2014/zdo2014-training/','/home/mjirik/data/zdo2014/zdo2014-training1/', 0, 30)
+#splitDataset('/home/mjirik/data/zdo2014/zdo2014-training/','/home/mjirik/data/zdo2014/zdo2014-training2/', 30, 60)
+#splitDataset('/home/mjirik/data/zdo2014/zdo2014-training/','/home/mjirik/data/zdo2014/zdo2014-training3/', 60, -1)
 

@@ -270,6 +270,3 @@ if __name__ == "__main__":
     print tdf
     #printEvaluation(teams, scores, stamps)
 
-# <codecell>
-
-
