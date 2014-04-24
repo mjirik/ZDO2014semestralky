@@ -34,6 +34,32 @@ print orig_data
 
 # <markdowncell>
 
+# V průběhu vyhodnocování je vytvářen logovací soubor. Nahládnout do něj můžete [zde](https://raw.githubusercontent.com/mjirik/ZDO2014semestralky/master/znacky.log). Základem je modul logging. Ten pak používáte namísto printu. 
+
+# <markdowncell>
+
+# Tyto řádky přidejte na začátek souboru k ostatním importům
+
+# <codecell>
+
+import logging
+logger = logging.getLogger(__name__)
+
+# <markdowncell>
+
+# Tento řádek přijde do funkce main
+
+# <codecell>
+
+logging.basicConfig(level=logging.DEBUG)
+
+# <markdowncell>
+
+# A takto si vypisujete libovolné zprávy pomocí loggeru.
+
+# <codecell>
+
+logger.debug('muj vypis cislo ' + str(1))
 
 # <headingcell level=1>
 
