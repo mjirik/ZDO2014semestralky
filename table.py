@@ -28,11 +28,11 @@ print gb.max().sort(column=['score'], ascending=False)
 print orig_data
 #print dir(pd)
 
-# <headingcell level=2>
+# <headingcell level=1>
 
 # Logovací soubor
 
-# <codecell>
+# <markdowncell>
 
 
 # <headingcell level=1>
