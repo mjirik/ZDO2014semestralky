@@ -7,7 +7,7 @@
 
 # <markdowncell>
 
-# Hodhocení prací probíhá pomocí následujícího kódu.
+# Hodhocení prací probíhá pomocí následujícího kódu. Práce jsou automaticky staženy z adres zadaných v "solution_list.ipynb". Pak jsou spuštěny a všechny otestovány na shodné náhodné podskupině testovacího datasetu. Na výsledky je pak možno navázat ve skrpitu "ZDO2014tabulka.ipynb"
 
 # <codecell>
 
