@@ -21,3 +21,18 @@
 2014-05-02 20:20:49,495 DEBUG:Team: sample M. Jirik
 2014-05-02 20:20:52,816 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
 2014-05-02 20:20:54,233 DEBUG:Team: cervenym
+2014-05-03 14:02:48,853 DEBUG:Total image number: 104
+2014-05-03 14:02:48,861 DEBUG:Team: sample M. Jirik
+2014-05-03 14:02:52,004 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-03 14:02:53,443 DEBUG:Team: cervenym
+2014-05-03 14:03:03,196 DEBUG:Team: nedvedj
+2014-05-03 14:03:03,198 DEBUG:Problem with: nedvedj
+2014-05-03 14:03:03,198 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-66f7aee1930c>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-66f7aee1930c>", line 19, in kontrola
+    studentske_reseni = ukazatel() # tim je zavolán váš konstruktor __init__
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 43, in __init__
+    classifier_path = os.path.join(path_to_script,
+NameError: global name 'path_to_script' is not defined
+
