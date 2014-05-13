@@ -16,7 +16,31 @@ orig_data = pd.read_csv("ZDO2014evaluation.csv")
 #orig_data.sort(column=['score'], ascending=False)
 #print orig_data
 gb = orig_data.groupby('team')
-print gb.max().sort(column=['score'], ascending=False)
+#print gb.max().sort(column=['score'], ascending=False)
+
+gbsort = gb.max().sort(column=['score'], ascending=False)
+gbsort['score']
+#tt.tolist()
+
+# <headingcell level=2>
+
+# Bodování za technickou část funkčnosti
+
+# <markdowncell>
+
+# K těmto bodům jsou pak v hodnocení funkčnosti ještě přidány body za dokumentaci v kódu, demo režim, git atd.
+
+# <codecell>
+
+%pylab inline --no-import-all
+np.power(gbsort['score'],2)*36
+
+## vizualizace progrese
+#te = np.arange(0,1.1,0.1)
+#y = np.power(te,2)*36
+
+#import matplotlib.pyplot as plt
+#plt.plot(te,y)
 
 # <headingcell level=1>
 
