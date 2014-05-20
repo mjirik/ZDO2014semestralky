@@ -51,3 +51,18 @@ NameError: global name 'path_to_script' is not defined
     classifier_path = os.path.join(path_to_script,
 NameError: global name 'path_to_script' is not defined
 
+2014-05-20 09:56:29,784 DEBUG:Total image number: 103
+2014-05-20 09:56:29,792 DEBUG:Team: sample M. Jirik
+2014-05-20 09:56:32,863 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-20 09:56:34,204 DEBUG:Team: cervenym
+2014-05-20 09:56:43,683 DEBUG:Team: nedvedj
+2014-05-20 09:56:44,332 DEBUG:Problem with: nedvedj
+2014-05-20 09:56:44,332 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-66f7aee1930c>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-66f7aee1930c>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
