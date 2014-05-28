@@ -143,7 +143,7 @@ def downloadAll(soldir):
         open(os.path.join(teamsoldir, "__init__.py"), 'a').close() 
         
         # remove '-' from package path
-        teamsoldirnew = teamsoldir.replace('-', '')
+        teamsoldirnew = teamsoldir.replace('-', '') + one[4]
         os.rename(teamsoldir, teamsoldirnew)
     
 def kontrolaVse():
@@ -183,8 +183,8 @@ def kontrolaVse():
         scoreone = 0
         vysledky = []
         try:
-            imp1 = my_import('ZDO2014students.' + one[1].replace('-', ''))
-            imp2 = my_import('ZDO2014students.' + one[1].replace('-', '') 
+            imp1 = my_import('ZDO2014students.' + one[1].replace('-', '') + one[4])
+            imp2 = my_import('ZDO2014students.' + one[1].replace('-', '') + one[4]
                              + '.' + one[2])
             #print imp2
             pointer = imp2.Znacky

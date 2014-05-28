@@ -66,3 +66,56 @@ NameError: global name 'path_to_script' is not defined
     class_index = self.clf.predict(self.one_file_features(image, demo))
 AttributeError: 'list' object has no attribute 'predict'
 
+2014-05-28 23:36:26,372 DEBUG:Total image number: 103
+2014-05-28 23:36:26,381 DEBUG:Team: sample M. Jirik
+2014-05-28 23:36:29,790 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-28 23:36:31,261 DEBUG:Team: cervenym
+2014-05-28 23:36:40,773 DEBUG:Team: nedvedj
+2014-05-28 23:36:43,435 DEBUG:Problem with: nedvedj
+2014-05-28 23:36:43,435 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-b31d0fc90503>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-b31d0fc90503>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
+2014-05-28 23:36:43,436 DEBUG:Team: RakHejdovaJuna
+2014-05-28 23:36:43,436 DEBUG:Problem with: RakHejdovaJuna
+2014-05-28 23:36:43,436 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-b31d0fc90503>", line 113, in kontrolaVse
+    + '.' + one[2])
+  File "<ipython-input-3-b31d0fc90503>", line 43, in my_import
+    __import__(name)
+ImportError: No module named ZDO2014sample_solution_hog
+
+2014-05-28 23:39:48,713 DEBUG:Total image number: 103
+2014-05-28 23:39:48,713 DEBUG:Team: sample M. Jirik
+2014-05-28 23:39:48,849 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-28 23:39:49,617 DEBUG:Team: cervenym
+2014-05-28 23:39:59,428 DEBUG:Team: nedvedj
+2014-05-28 23:40:01,089 DEBUG:Problem with: nedvedj
+2014-05-28 23:40:01,089 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
+2014-05-28 23:40:01,089 DEBUG:Team: RakHejdovaJuna
+2014-05-28 23:40:01,101 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-28 23:40:01,113 DEBUG:Problem with: RakHejdovaJuna
+2014-05-28 23:40:01,113 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014sample_solution_hog.py", line 171, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "ZDO2014students/Semestralkamaster1/ZDO2014sample_solution_hog.py", line 81, in one_file_features
+    val = filter.threshold_otsu(imr)
+AttributeError: 'builtin_function_or_method' object has no attribute 'threshold_otsu'
+
