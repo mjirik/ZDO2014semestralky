@@ -119,3 +119,34 @@ AttributeError: 'list' object has no attribute 'predict'
     val = filter.threshold_otsu(imr)
 AttributeError: 'builtin_function_or_method' object has no attribute 'threshold_otsu'
 
+2014-05-29 09:32:36,818 DEBUG:Total image number: 103
+2014-05-29 09:32:36,825 DEBUG:Team: sample M. Jirik
+2014-05-29 09:32:39,959 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-29 09:32:41,386 DEBUG:Team: cervenym
+2014-05-29 09:32:51,004 DEBUG:Team: nedvedj
+2014-05-29 09:32:53,275 DEBUG:Problem with: nedvedj
+2014-05-29 09:32:53,276 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
+2014-05-29 09:32:53,276 DEBUG:Team: RakHejdovaJuna
+2014-05-29 09:32:53,289 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-29 09:32:53,343 DEBUG:Problem with: RakHejdovaJuna
+2014-05-29 09:32:53,343 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014sample_solution_hog.py", line 172, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
