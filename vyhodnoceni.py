@@ -123,12 +123,14 @@ def downloadAll(soldir):
         shutil.rmtree(soldir)
     except:
         print "Problem with rmtree"
+        traceback.print_exc()
             
     try:
         os.mkdir(soldir)
         open(os.path.join(soldir, "__init__.py"), 'a').close()  
     except:
         print "Problem with mkdir"
+        traceback.print_exc()
         
         # download all solutions
     for one in solutions_list:

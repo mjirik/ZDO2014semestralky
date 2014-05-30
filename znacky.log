@@ -150,3 +150,91 @@ AttributeError: 'list' object has no attribute 'predict'
     for i in xrange(np.size(self._classes)):
 AttributeError: 'GaussianNB' object has no attribute '_classes'
 
+2014-05-30 09:14:15,526 DEBUG:Total image number: 104
+2014-05-30 09:14:15,536 DEBUG:Team: sample M. Jirik
+2014-05-30 09:14:18,846 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-30 09:14:20,629 DEBUG:Team: cervenym
+2014-05-30 09:14:30,415 DEBUG:Team: nedvedj
+2014-05-30 09:14:32,180 DEBUG:Problem with: nedvedj
+2014-05-30 09:14:32,180 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
+2014-05-30 09:14:32,180 DEBUG:Team: RakHejdovaJuna
+2014-05-30 09:14:32,181 DEBUG:Problem with: RakHejdovaJuna
+2014-05-30 09:14:32,181 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 113, in kontrolaVse
+    + '.' + one[2])
+  File "<ipython-input-3-860edf13a8a6>", line 43, in my_import
+    __import__(name)
+ImportError: No module named ZDO2014sample_solution_hog
+
+2014-05-30 09:21:20,080 DEBUG:Total image number: 103
+2014-05-30 09:21:20,080 DEBUG:Team: sample M. Jirik
+2014-05-30 09:21:20,198 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-30 09:21:21,283 DEBUG:Team: cervenym
+2014-05-30 09:21:30,983 DEBUG:Team: nedvedj
+2014-05-30 09:21:31,832 DEBUG:Problem with: nedvedj
+2014-05-30 09:21:31,832 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
+2014-05-30 09:21:31,832 DEBUG:Team: RakHejdovaJuna
+2014-05-30 09:21:31,917 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-30 09:21:31,973 DEBUG:Problem with: RakHejdovaJuna
+2014-05-30 09:21:31,973 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-860edf13a8a6>", line 118, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-860edf13a8a6>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-05-30 13:07:05,510 DEBUG:Total image number: 104
+2014-05-30 13:07:05,510 DEBUG:Team: sample M. Jirik
+2014-05-30 13:07:05,623 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-30 13:07:06,811 DEBUG:Team: cervenym
+2014-05-30 13:07:16,268 DEBUG:Team: nedvedj
+2014-05-30 13:07:17,662 DEBUG:Problem with: nedvedj
+2014-05-30 13:07:17,662 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N1041P_JakubNedved_SP.py", line 154, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+AttributeError: 'list' object has no attribute 'predict'
+
+2014-05-30 13:07:17,662 DEBUG:Team: RakHejdovaJuna
+2014-05-30 13:07:17,759 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-05-30 13:07:17,795 DEBUG:Problem with: RakHejdovaJuna
+2014-05-30 13:07:17,795 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-05-30 13:07:17,795 DEBUG:Team: RakHejdovaJuna2
+2014-05-30 13:07:17,883 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
