@@ -238,3 +238,224 @@ AttributeError: 'GaussianNB' object has no attribute '_classes'
 
 2014-05-30 13:07:17,795 DEBUG:Team: RakHejdovaJuna2
 2014-05-30 13:07:17,883 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 09:46:40,811 DEBUG:Total image number: 103
+2014-06-02 09:46:40,823 DEBUG:Team: sample M. Jirik
+2014-06-02 09:46:44,364 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 09:46:45,846 DEBUG:Team: cervenym
+2014-06-02 09:46:55,393 DEBUG:Team: nedvedj
+2014-06-02 09:46:55,395 DEBUG:Problem with: nedvedj
+2014-06-02 09:46:55,395 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 115, in kontrolaVse
+    + '.' + one[2])
+  File "<ipython-input-3-97eb87bd5554>", line 43, in my_import
+    __import__(name)
+ImportError: No module named ZDO_A13N1041P_JakubNedved_SP
+
+2014-06-02 09:46:55,395 DEBUG:Team: RakHejdovaJuna
+2014-06-02 09:46:55,481 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 09:46:55,534 DEBUG:Problem with: RakHejdovaJuna
+2014-06-02 09:46:55,534 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 09:46:55,534 DEBUG:Team: RakHejdovaJuna2
+2014-06-02 09:46:55,615 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 10:14:55,875 DEBUG:Total image number: 103
+2014-06-02 10:14:55,875 DEBUG:Team: sample M. Jirik
+2014-06-02 10:14:55,986 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 10:14:57,227 DEBUG:Team: cervenym
+2014-06-02 10:15:06,618 DEBUG:Team: nedvedj
+2014-06-02 10:15:06,620 DEBUG:Problem with: nedvedj
+2014-06-02 10:15:06,620 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 115, in kontrolaVse
+    + '.' + one[2])
+  File "<ipython-input-3-97eb87bd5554>", line 43, in my_import
+    __import__(name)
+ImportError: No module named ZDO_A13N1041P_JakubNedved_SP
+
+2014-06-02 10:15:06,620 DEBUG:Team: RakHejdovaJuna
+2014-06-02 10:15:06,705 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 10:15:06,747 DEBUG:Problem with: RakHejdovaJuna
+2014-06-02 10:15:06,747 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 10:15:06,747 DEBUG:Team: RakHejdovaJuna2
+2014-06-02 10:15:06,827 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 10:16:51,784 DEBUG:Total image number: 103
+2014-06-02 10:16:51,785 DEBUG:Team: sample M. Jirik
+2014-06-02 10:16:51,902 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 10:16:52,585 DEBUG:Team: cervenym
+2014-06-02 10:17:02,604 DEBUG:Team: nedvedj
+2014-06-02 10:17:02,891 DEBUG:Problem with: nedvedj
+2014-06-02 10:17:02,891 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N0141P_JakubNedved_SP.py", line 152, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 10:17:02,891 DEBUG:Team: RakHejdovaJuna
+2014-06-02 10:17:02,974 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 10:17:03,013 DEBUG:Problem with: RakHejdovaJuna
+2014-06-02 10:17:03,013 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 10:17:03,013 DEBUG:Team: RakHejdovaJuna2
+2014-06-02 10:17:03,089 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:00:07,321 DEBUG:Total image number: 103
+2014-06-02 11:00:07,321 DEBUG:Team: sample M. Jirik
+2014-06-02 11:00:07,435 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:00:08,105 DEBUG:Team: cervenym
+2014-06-02 11:00:17,533 DEBUG:Team: nedvedj
+2014-06-02 11:00:17,821 DEBUG:Problem with: nedvedj
+2014-06-02 11:00:17,821 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N0141P_JakubNedved_SP.py", line 152, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 11:00:17,821 DEBUG:Team: RakHejdovaJuna
+2014-06-02 11:00:17,902 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:00:17,940 DEBUG:Problem with: RakHejdovaJuna
+2014-06-02 11:00:17,940 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 11:00:17,940 DEBUG:Team: RakHejdovaJuna2
+2014-06-02 11:00:18,014 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:00:23,692 DEBUG:Team: nedvedj2
+2014-06-02 11:00:23,694 DEBUG:Problem with: nedvedj2
+2014-06-02 11:00:23,694 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 115, in kontrolaVse
+    + '.' + one[2])
+  File "<ipython-input-3-97eb87bd5554>", line 43, in my_import
+    __import__(name)
+ImportError: No module named ZDO_A13N1041P_JakubNedved_SP
+
+2014-06-02 11:02:18,558 DEBUG:Total image number: 104
+2014-06-02 11:02:18,559 DEBUG:Team: sample M. Jirik
+2014-06-02 11:02:18,561 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:02:19,569 DEBUG:Team: cervenym
+2014-06-02 11:02:29,323 DEBUG:Team: nedvedj
+2014-06-02 11:02:29,592 DEBUG:Problem with: nedvedj
+2014-06-02 11:02:29,592 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-8-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-8-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N0141P_JakubNedved_SP.py", line 152, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 11:02:29,592 DEBUG:Team: RakHejdovaJuna
+2014-06-02 11:02:29,671 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:02:29,708 DEBUG:Problem with: RakHejdovaJuna
+2014-06-02 11:02:29,708 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-8-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-8-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 11:02:29,708 DEBUG:Team: RakHejdovaJuna2
+2014-06-02 11:02:29,779 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:02:35,514 DEBUG:Team: nedvedj2
+2014-06-02 11:05:15,005 DEBUG:Total image number: 103
+2014-06-02 11:05:15,005 DEBUG:Team: sample M. Jirik
+2014-06-02 11:05:15,118 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:05:16,284 DEBUG:Team: cervenym
+2014-06-02 11:05:25,691 DEBUG:Team: nedvedj
+2014-06-02 11:05:25,966 DEBUG:Problem with: nedvedj
+2014-06-02 11:05:25,966 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster/ZDO_A13N0141P_JakubNedved_SP.py", line 152, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 11:05:25,967 DEBUG:Team: RakHejdovaJuna
+2014-06-02 11:05:26,047 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:05:26,084 DEBUG:Problem with: RakHejdovaJuna
+2014-06-02 11:05:26,084 DEBUG:Traceback (most recent call last):
+  File "<ipython-input-3-97eb87bd5554>", line 120, in kontrolaVse
+    scoreone, vysledky = kontrola(pointer, obrazky, reseni)
+  File "<ipython-input-3-97eb87bd5554>", line 29, in kontrola
+    result = studentske_reseni.rozpoznejZnacku(im)
+  File "ZDO2014students/Semestralkamaster1/ZDO2014juna_rak_hejdova_hog.py", line 238, in rozpoznejZnacku
+    class_index = self.clf.predict(self.one_file_features(image, demo))
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 59, in predict
+    jll = self._joint_log_likelihood(X)
+  File "/usr/lib/pymodules/python2.7/sklearn/naive_bayes.py", line 172, in _joint_log_likelihood
+    for i in xrange(np.size(self._classes)):
+AttributeError: 'GaussianNB' object has no attribute '_classes'
+
+2014-06-02 11:05:26,084 DEBUG:Team: RakHejdovaJuna2
+2014-06-02 11:05:26,158 DEBUG:Ukazka loggovani, nacteni klasifikatoru ok
+2014-06-02 11:05:31,870 DEBUG:Team: nedvedj2
