@@ -49,7 +49,7 @@ np.power(gbsort['score'].astype(np.double),2)*36
 # <codecell>
 
 #pd.set_option('display.max_columns', None)
-print orig_data
+print orig_data.tail(40)
 #print dir(pd)
 
 # <headingcell level=1>
