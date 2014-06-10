@@ -33,14 +33,15 @@ gbsort['score']
 # <codecell>
 
 %pylab inline --no-import-all
-np.power(gbsort['score'].astype(np.double),2)*36
+import matplotlib.pyplot as plt
+
+print np.power(gbsort['score'].astype(np.double),2)*36
 
 ## vizualizace progrese
-#te = np.arange(0,1.1,0.1)
-#y = np.power(te,2)*36
-
-#import matplotlib.pyplot as plt
-#plt.plot(te,y)
+te = np.arange(0,1.1,0.1)
+y = np.power(te,2)*36
+plt.figure(figsize=(2,1.5))
+plt.plot(te,y)
 
 # <headingcell level=1>
 
