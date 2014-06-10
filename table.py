@@ -33,7 +33,7 @@ gbsort['score']
 # <codecell>
 
 %pylab inline --no-import-all
-np.power(gbsort['score'],2)*36
+np.power(gbsort['score'].astype(np.double),2)*36
 
 ## vizualizace progrese
 #te = np.arange(0,1.1,0.1)

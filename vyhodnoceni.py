@@ -9,6 +9,18 @@
 
 # Hodhocení prací probíhá pomocí následujícího kódu. Práce jsou automaticky staženy z adres zadaných v "solution_list.ipynb". Pak jsou spuštěny a všechny otestovány na shodné náhodné podskupině testovacího datasetu. Na výsledky je pak možno navázat ve skrpitu "ZDO2014tabulka.ipynb"
 
+# <headingcell level=2>
+
+# Poznámky pro spouštění testu
+
+# <markdowncell>
+
+# V případě opakovaného spouštění testování je z důvodu opakovaných importů modulů se stejnými jmnény nezbytné restartovat kernel. To lze udělat pomocí Kernel -> Restart
+# 
+# Výchozí adresář s testovacími daty je na staven na následující cestu
+# 
+#     /home/mjirik/data/zdo2014/znacky-testing/
+
 # <codecell>
 
 
@@ -35,6 +47,9 @@ import random
 # ziskani seznamu 
 import solutions_list
 %run solutions_list
+
+# cesta k trenovacim datum
+test_data_path = '/home/mjirik/data/zdo2014/znacky-testing/'
 
 # Nastaveni logovaciho souboru
 import logging
@@ -164,9 +179,7 @@ def kontrolaVse():
     
    
 
-    filesall, labelsall = readImageDir(
-        #'/home/mjirik/data/zdo2014/zdo2014-training/')
-        '/home/mjirik/data/zdo2014/znacky-testing/')
+    filesall, labelsall = readImageDir(test_data_path)
         
     #sklearn.cross_validation.train_test_split(
 
@@ -279,6 +292,13 @@ if __name__ == "__main__":
     teams, scores, stamps, classifs = kontrolaVse()
     tdf = saveAndMergeEvaluation(teams, scores, stamps)
     saveClassifs(teams, classifs)
-    print tdf
+    
     #printEvaluation(teams, scores, stamps)
+
+# <codecell>
+
+print tdf.tail(50)
+
+# <codecell>
+
 
