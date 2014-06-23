@@ -3,7 +3,7 @@
 
 # <codecell>
 
-#  [zip url, direcoty name, package name, team label, directory_bonus_identifier]
+#  [zip url, direcoty name, package name, team label, identifier_for_same_named_dirs]
 solutions_list = [
     ['https://github.com/mjirik/ZDO2014sample_solution/archive/master.zip',
      'ZDO2014sample_solution-master',
