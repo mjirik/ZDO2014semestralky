@@ -49,7 +49,7 @@ import solutions_list
 %run solutions_list
 
 # cesta k trenovacim datum
-test_data_path = '/home/mjirik/data/zdo2014/znacky-testing/'
+test_data_path = '/home/mjirik/data/zdo2014/zdo2014-znacky-testing/'
 
 # Nastaveni logovaciho souboru
 import logging
